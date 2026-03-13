@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0.09 0.006 260;
+  --foreground: 0.95 0.01 260;
+  --card: 0.13 0.008 260;
+  --card-foreground: 0.95 0.01 260;
+  --popover: 0.11 0.007 260;
+  --popover-foreground: 0.95 0.01 260;
+  --primary: 0.72 0.16 200;
+  --primary-foreground: 0.09 0.006 260;
+  --secondary: 0.2 0.01 260;
+  --secondary-foreground: 0.85 0.01 260;
+  --muted: 0.17 0.007 260;
+  --muted-foreground: 0.55 0.01 260;
+  --accent: 0.65 0.18 195;
+  --accent-foreground: 0.09 0.006 260;
+  --destructive: 0.55 0.22 25;
+  --destructive-foreground: 0.98 0.005 0;
+  --border: 0.22 0.01 260;
+  --input: 0.2 0.01 260;
+  --ring: 0.72 0.16 200;
+  --radius: 4px;
+  --chart-1: 0.72 0.16 200;
+  --chart-2: 0.65 0.15 160;
+  --chart-3: 0.6 0.14 280;
+  --chart-4: 0.7 0.13 50;
+  --chart-5: 0.65 0.17 340;
+  --sidebar: 0.1 0.007 260;
+  --sidebar-foreground: 0.95 0.01 260;
+  --sidebar-primary: 0.72 0.16 200;
+  --sidebar-primary-foreground: 0.09 0.006 260;
+  --sidebar-accent: 0.17 0.007 260;
+  --sidebar-accent-foreground: 0.85 0.01 260;
+  --sidebar-border: 0.2 0.01 260;
+  --sidebar-ring: 0.72 0.16 200;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: oklch(var(--background));
+  color: oklch(var(--foreground));
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: oklch(0.1 0.007 260);
+}
+::-webkit-scrollbar-thumb {
+  background: oklch(0.25 0.01 260);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.35 0.01 260);
+}
+
+/* Panel separator glow */
+.panel-border {
+  border-color: oklch(0.22 0.01 260);
+}
+
+/* Timecode font */
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Segment card timeline clip aesthetic */
+.segment-clip {
+  background: oklch(0.15 0.01 260);
+  border: 1px solid oklch(0.22 0.01 260);
+  border-left: 3px solid oklch(0.72 0.16 200);
+  transition: all 0.15s ease;
+}
+
+.segment-clip:hover {
+  border-color: oklch(0.72 0.16 200);
+  background: oklch(0.17 0.015 220);
+}
+
+.segment-clip.selected {
+  border-color: oklch(0.72 0.16 200);
+  background: oklch(0.16 0.02 210);
+  box-shadow: 0 0 0 1px oklch(0.72 0.16 200 / 0.3), inset 0 0 20px oklch(0.72 0.16 200 / 0.05);
+}
+
+/* Canvas monitor frame */
+.monitor-frame {
+  background: oklch(0.06 0.005 260);
+  border: 1px solid oklch(0.2 0.01 260);
+  box-shadow: 0 0 40px oklch(0 0 0 / 0.8), inset 0 0 60px oklch(0 0 0 / 0.4);
+}
+
+/* NLE panel style */
+.nle-panel {
+  background: oklch(0.11 0.007 260);
+  border: 1px solid oklch(0.2 0.01 260);
+}
+
+/* Accent glow button */
+.btn-glow {
+  box-shadow: 0 0 12px oklch(0.72 0.16 200 / 0.3);
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 20px oklch(0.72 0.16 200 / 0.5);
+}
+
+/* Top bar gradient */
+.topbar-bg {
+  background: linear-gradient(180deg, oklch(0.11 0.01 260) 0%, oklch(0.09 0.006 260) 100%);
+  border-bottom: 1px solid oklch(0.2 0.01 260);
+}
